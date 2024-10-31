@@ -1,11 +1,17 @@
-// routes/user.ts
-
 import { Router } from "express";
+import {
+  getStudents,
+  updateStudent,
+  createStudent,
+  deleteStudent,
+} from "../controllers/student";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.send("Listado de Usuarios");
-});
+router.get("/", getStudents);
+router.post("/", createStudent);
+router.delete("/:id", deleteStudent);
+
+router.put("/:id", updateStudent);
 
 export default router;
