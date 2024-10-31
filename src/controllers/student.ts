@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 
 import { deleteById, findAll, insert, update } from "../services/student";
 import { Student } from "../interfaces/student";
-import { parse } from "path";
 
 // Obtener todos los alumnos
 export const getStudents = async (req: Request, res: Response) => {
